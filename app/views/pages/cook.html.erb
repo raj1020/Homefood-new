@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  <div> This page is for the cooks. Hence, Please upload an attractive photo of your meal. Enter the details about ingredients, price and time required to get the food ready for collection after receiving the order  </div>
+  <%= link_to "logout", destroy_user_session_path, method: :delete %>
+<%else %>
+  <p>Please Sign Up or Sign In to view the content.</p>
+  <%= link_to "Login", new_user_session_path %>
+
+  <h2><%= link_to "Sign up", new_user_registration_path%>
+
+<% end %>

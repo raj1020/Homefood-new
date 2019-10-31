@@ -1,0 +1,16 @@
+<h1> This is home page  </h1>
+
+<%= button_to "Order HomeFood", order_path %>
+<p>  </p>
+<p>  </p>
+<%= button_to "Cook HomeFood", cook_path %>
+<p>  </p>
+<p>  </p>
+<%= button_to "Deliver HomeFood", delivery_path %>
+
+
+<% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+<% else %>
+    <%= link_to "login", new_user_session_path %>
+<% end %>

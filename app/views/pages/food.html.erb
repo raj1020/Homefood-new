@@ -1,0 +1,12 @@
+
+
+<h1> Here is the food you can buy along with the images, prices, and estimated delivery time for the food.  </h1>
+
+<% if user_signed_in? %>
+    
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+<%else %>
+  <%= link_to "Login", new_user_session_path %>
+
+  <h2><%= link_to "Sign up", new_user_registration_path%>
+<% end %>

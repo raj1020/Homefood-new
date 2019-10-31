@@ -1,0 +1,18 @@
+<h1> This page lets customers decide to put order after logging in or without logging in. </h1>
+
+
+<% if user_signed_in? %>
+  <div> Go to the <%= link_to "Food Page", food_path%>  OR </div>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+<%else %>
+  <p>Please Sign Up or Sign In to receive great offers.</p>
+  <%= link_to "Login to order", new_user_session_path %>
+
+  <h2><%= link_to "Sign up", new_user_registration_path%>
+  <%= button_to "Order HomeFood without signing in", food_path %>
+
+<% end %> 
+
+
+
