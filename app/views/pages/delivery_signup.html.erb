@@ -1,0 +1,8 @@
+<h1> This page is for potential delivery partners. This page is used to collect information and to verify that they appropriate vehicle and license to drive it. </h1>
+<h1> This page provide approval for potential delivery partners.  </h1>
+
+
+<% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+<%end %>
+

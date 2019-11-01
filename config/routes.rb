@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   
   
-  devise_for :cooks, path: 'cooks',  controllers: {sessions: 'users/sessions'}
-  devise_for :users, path: 'users',   controllers: {sessions: 'users/sessions'}
+    devise_for :users, path: 'users',   controllers: {sessions: 'users/sessions'}
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
@@ -14,5 +13,11 @@ Rails.application.routes.draw do
   get "/food", to: "pages#food", as: "food"
   post "/food", to: "pages#food"
   get "/delivery", to: "pages#delivery", as: "delivery"
-  post"/delivery", to: "pages#delivery"
+  post "/delivery", to: "pages#delivery"
+  get "/cook_signup", to: "pages#cook_signup", as: "cook_signup"
+  post "/cook_signup", to: "pages#cook_signup"
+  get "/delivery_signup", to: "pages#delivery_signup", as: "delivery_signup"
+  post "/delivery_signup", to: "pages#delivery_signup"
+  
+
 end

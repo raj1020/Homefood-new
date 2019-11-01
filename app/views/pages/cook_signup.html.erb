@@ -1,0 +1,11 @@
+<h1> This page is for people who wish to cook food but need to be approved. </h1>
+<h1> Please provide your identification documents and agree that you will adhere to safe food practices.  </h1>
+
+
+
+
+<% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+<%end %>
+
+

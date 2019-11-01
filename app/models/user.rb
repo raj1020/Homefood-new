@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  enum role: [:eater, :cook, :delivery_partner]
+  enum role: [:no_role, :cook, :delivery_partner]
+  enum role2: [:no_roles, :chef, :driver]
 end

@@ -9,9 +9,10 @@ class PagesController < ApplicationController
     end 
     
     def cook 
-
-        unless current_user.cook?
-            redirect_to root_path
+        if user_signed_in?
+            unless current_user.cook? || current_user.chef?
+                redirect_to cook_signup_path 
+            end
         end  
 
     end  
@@ -28,7 +29,18 @@ class PagesController < ApplicationController
 
     def delivery 
 
+        if user_signed_in?
+            unless current_user.delivery_partner? || current_user.driver? 
+                redirect_to delivery_signup_path 
+            end
+        end  
+
     end   
+    
+
+    def cook_signup 
+        @cook = Cook.new 
+    end  
     
 
     
