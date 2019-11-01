@@ -39,7 +39,7 @@ class PagesController < ApplicationController
     
 
     def cook_signup 
-        @cook = Cook.new 
+        #@cook = Cook.new
     end  
     
 
